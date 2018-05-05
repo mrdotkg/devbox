@@ -1,0 +1,347 @@
+mysql: [Warning] Using a password on the command line interface can be insecure.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+php-gettext is already the newest version (1.0.11-2build1).
+php-gettext set to manually installed.
+apache2 is already the newest version (2.4.18-2ubuntu3.8).
+apache2 set to manually installed.
+libapache2-mod-php is already the newest version (1:7.0+35ubuntu6.1).
+libapache2-mod-php set to manually installed.
+php-gd is already the newest version (1:7.0+35ubuntu6.1).
+php-gd set to manually installed.
+php-mysql is already the newest version (1:7.0+35ubuntu6.1).
+php-mysql set to manually installed.
+The following additional packages will be installed:
+  libcurl3 php7.0 php7.0-curl
+The following NEW packages will be installed:
+  libcurl3 php php-curl php7.0 php7.0-curl
+0 upgraded, 5 newly installed, 0 to remove and 0 not upgraded.
+Need to get 220 kB of archives.
+After this operation, 714 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libcurl3 amd64 7.47.0-1ubuntu2.7 [187 kB]
+Get:2 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 php7.0 all 7.0.28-0ubuntu0.16.04.1 [1,290 B]
+Get:3 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 php all 1:7.0+35ubuntu6.1 [2,862 B]
+Get:4 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 php7.0-curl amd64 7.0.28-0ubuntu0.16.04.1 [27.4 kB]
+Get:5 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 php-curl all 1:7.0+35ubuntu6.1 [1,928 B]
+dpkg-preconfigure: unable to re-open stdin: No such file or directory
+Fetched 220 kB in 1s (198 kB/s)
+Selecting previously unselected package libcurl3:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 64086 files and directories currently installed.)
+Preparing to unpack .../libcurl3_7.47.0-1ubuntu2.7_amd64.deb ...
+Unpacking libcurl3:amd64 (7.47.0-1ubuntu2.7) ...
+Selecting previously unselected package php7.0.
+Preparing to unpack .../php7.0_7.0.28-0ubuntu0.16.04.1_all.deb ...
+Unpacking php7.0 (7.0.28-0ubuntu0.16.04.1) ...
+Selecting previously unselected package php.
+Preparing to unpack .../php_1%3a7.0+35ubuntu6.1_all.deb ...
+Unpacking php (1:7.0+35ubuntu6.1) ...
+Selecting previously unselected package php7.0-curl.
+Preparing to unpack .../php7.0-curl_7.0.28-0ubuntu0.16.04.1_amd64.deb ...
+Unpacking php7.0-curl (7.0.28-0ubuntu0.16.04.1) ...
+Selecting previously unselected package php-curl.
+Preparing to unpack .../php-curl_1%3a7.0+35ubuntu6.1_all.deb ...
+Unpacking php-curl (1:7.0+35ubuntu6.1) ...
+Processing triggers for libc-bin (2.23-0ubuntu10) ...
+Processing triggers for libapache2-mod-php7.0 (7.0.28-0ubuntu0.16.04.1) ...
+Setting up libcurl3:amd64 (7.47.0-1ubuntu2.7) ...
+Setting up php7.0 (7.0.28-0ubuntu0.16.04.1) ...
+Setting up php (1:7.0+35ubuntu6.1) ...
+Setting up php7.0-curl (7.0.28-0ubuntu0.16.04.1) ...
+
+Creating config file /etc/php/7.0/mods-available/curl.ini with new version
+Setting up php-curl (1:7.0+35ubuntu6.1) ...
+Processing triggers for libc-bin (2.23-0ubuntu10) ...
+Processing triggers for libapache2-mod-php7.0 (7.0.28-0ubuntu0.16.04.1) ...
+Enabling module rewrite.
+To activate the new configuration, you need to run:
+  service apache2 restart
+All settings correct for using Composer
+Downloading...
+
+Composer (version 1.6.5) successfully installed to: /home/vagrant/composer.phar
+Use it: php composer.phar
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  nodejs
+0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+Need to get 10.1 MB of archives.
+After this operation, 45.6 MB of additional disk space will be used.
+Get:1 https://deb.nodesource.com/node_6.x xenial/main amd64 nodejs amd64 6.14.2-1nodesource1 [10.1 MB]
+dpkg-preconfigure: unable to re-open stdin: No such file or directory
+Fetched 10.1 MB in 1s (7,058 kB/s)
+Selecting previously unselected package nodejs.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 64112 files and directories currently installed.)
+Preparing to unpack .../nodejs_6.14.2-1nodesource1_amd64.deb ...
+Unpacking nodejs (6.14.2-1nodesource1) ...
+Processing triggers for man-db (2.7.5-1) ...
+Setting up nodejs (6.14.2-1nodesource1) ...
+npm WARN deprecated gulp-util@3.0.8: gulp-util is deprecated - replace it, following the guidelines at https://medium.com/gulpjs/gulp-util-ca3b1f9f9ac5
+npm WARN deprecated graceful-fs@3.0.11: please upgrade to graceful-fs 4 for compatibility with current and future versions of Node.js
+npm WARN deprecated minimatch@2.0.10: Please update to minimatch 3.0.2 or higher to avoid a RegExp DoS issue
+npm WARN deprecated minimatch@0.2.14: Please update to minimatch 3.0.2 or higher to avoid a RegExp DoS issue
+npm WARN deprecated graceful-fs@1.2.3: please upgrade to graceful-fs 4 for compatibility with current and future versions of Node.js
+npm WARN deprecated natives@1.1.3: This module relies on Node.js's internals and will break at some point. Do not use it, and update to graceful-fs@4.x.
+/usr/bin/bower -> /usr/lib/node_modules/bower/bin/bower
+/usr/bin/gulp -> /usr/lib/node_modules/gulp/bin/gulp.js
+/usr/lib
+├── bower@1.8.4 
+└─┬ gulp@3.9.1 
+  ├── archy@1.0.0 
+  ├─┬ chalk@1.1.3 
+  │ ├── ansi-styles@2.2.1 
+  │ ├── escape-string-regexp@1.0.5 
+  │ ├─┬ has-ansi@2.0.0 
+  │ │ └── ansi-regex@2.1.1 
+  │ ├── strip-ansi@3.0.1 
+  │ └── supports-color@2.0.0 
+  ├── deprecated@0.0.1 
+  ├─┬ gulp-util@3.0.8 
+  │ ├── array-differ@1.0.0 
+  │ ├── array-uniq@1.0.3 
+  │ ├── beeper@1.1.1 
+  │ ├── dateformat@2.2.0 
+  │ ├─┬ fancy-log@1.3.2 
+  │ │ ├─┬ ansi-gray@0.1.1 
+  │ │ │ └── ansi-wrap@0.1.0 
+  │ │ ├── color-support@1.1.3 
+  │ │ └── time-stamp@1.1.0 
+  │ ├─┬ gulplog@1.0.0 
+  │ │ └── glogg@1.0.1 
+  │ ├─┬ has-gulplog@0.1.0 
+  │ │ └── sparkles@1.0.0 
+  │ ├── lodash._reescape@3.0.0 
+  │ ├── lodash._reevaluate@3.0.0 
+  │ ├── lodash._reinterpolate@3.0.0 
+  │ ├─┬ lodash.template@3.6.2 
+  │ │ ├── lodash._basecopy@3.0.1 
+  │ │ ├── lodash._basetostring@3.0.1 
+  │ │ ├── lodash._basevalues@3.0.0 
+  │ │ ├── lodash._isiterateecall@3.0.9 
+  │ │ ├─┬ lodash.escape@3.2.0 
+  │ │ │ └── lodash._root@3.0.1 
+  │ │ ├─┬ lodash.keys@3.1.2 
+  │ │ │ ├── lodash._getnative@3.9.1 
+  │ │ │ ├── lodash.isarguments@3.1.0 
+  │ │ │ └── lodash.isarray@3.0.4 
+  │ │ ├── lodash.restparam@3.6.1 
+  │ │ └── lodash.templatesettings@3.1.1 
+  │ ├─┬ multipipe@0.1.2 
+  │ │ └─┬ duplexer2@0.0.2 
+  │ │   └── readable-stream@1.1.14 
+  │ ├── object-assign@3.0.0 
+  │ ├── replace-ext@0.0.1 
+  │ ├─┬ through2@2.0.3 
+  │ │ ├─┬ readable-stream@2.3.6 
+  │ │ │ ├── core-util-is@1.0.2 
+  │ │ │ ├── inherits@2.0.3 
+  │ │ │ ├── isarray@1.0.0 
+  │ │ │ ├── process-nextick-args@2.0.0 
+  │ │ │ ├── safe-buffer@5.1.2 
+  │ │ │ ├── string_decoder@1.1.1 
+  │ │ │ └── util-deprecate@1.0.2 
+  │ │ └── xtend@4.0.1 
+  │ └─┬ vinyl@0.5.3 
+  │   ├── clone@1.0.4 
+  │   └── clone-stats@0.0.1 
+  ├── interpret@1.1.0 
+  ├─┬ liftoff@2.5.0 
+  │ ├── extend@3.0.1 
+  │ ├─┬ findup-sync@2.0.0 
+  │ │ ├── detect-file@1.0.0 
+  │ │ ├─┬ is-glob@3.1.0 
+  │ │ │ └── is-extglob@2.1.1 
+  │ │ ├─┬ micromatch@3.1.10 
+  │ │ │ ├── arr-diff@4.0.0 
+  │ │ │ ├── array-unique@0.3.2 
+  │ │ │ ├─┬ braces@2.3.2 
+  │ │ │ │ ├── arr-flatten@1.1.0 
+  │ │ │ │ ├─┬ extend-shallow@2.0.1 
+  │ │ │ │ │ └── is-extendable@0.1.1 
+  │ │ │ │ ├─┬ fill-range@4.0.0 
+  │ │ │ │ │ ├── extend-shallow@2.0.1 
+  │ │ │ │ │ ├─┬ is-number@3.0.0 
+  │ │ │ │ │ │ └─┬ kind-of@3.2.2 
+  │ │ │ │ │ │   └── is-buffer@1.1.6 
+  │ │ │ │ │ ├── repeat-string@1.6.1 
+  │ │ │ │ │ └── to-regex-range@2.1.1 
+  │ │ │ │ ├── repeat-element@1.1.2 
+  │ │ │ │ ├─┬ snapdragon-node@2.1.1 
+  │ │ │ │ │ ├─┬ define-property@1.0.0 
+  │ │ │ │ │ │ └─┬ is-descriptor@1.0.2 
+  │ │ │ │ │ │   ├── is-accessor-descriptor@1.0.0 
+  │ │ │ │ │ │   └── is-data-descriptor@1.0.0 
+  │ │ │ │ │ └─┬ snapdragon-util@3.0.1 
+  │ │ │ │ │   └── kind-of@3.2.2 
+  │ │ │ │ └── split-string@3.1.0 
+  │ │ │ ├─┬ define-property@2.0.2 
+  │ │ │ │ └─┬ is-descriptor@1.0.2 
+  │ │ │ │   ├── is-accessor-descriptor@1.0.0 
+  │ │ │ │   └── is-data-descriptor@1.0.0 
+  │ │ │ ├─┬ extend-shallow@3.0.2 
+  │ │ │ │ ├── assign-symbols@1.0.0 
+  │ │ │ │ └── is-extendable@1.0.1 
+  │ │ │ ├─┬ extglob@2.0.4 
+  │ │ │ │ ├─┬ define-property@1.0.0 
+  │ │ │ │ │ └─┬ is-descriptor@1.0.2 
+  │ │ │ │ │   ├── is-accessor-descriptor@1.0.0 
+  │ │ │ │ │   └── is-data-descriptor@1.0.0 
+  │ │ │ │ ├─┬ expand-brackets@2.1.4 
+  │ │ │ │ │ ├── define-property@0.2.5 
+  │ │ │ │ │ ├── extend-shallow@2.0.1 
+  │ │ │ │ │ └── posix-character-classes@0.1.1 
+  │ │ │ │ └── extend-shallow@2.0.1 
+  │ │ │ ├── fragment-cache@0.2.1 
+  │ │ │ ├── kind-of@6.0.2 
+  │ │ │ ├─┬ nanomatch@1.2.9 
+  │ │ │ │ ├─┬ is-odd@2.0.0 
+  │ │ │ │ │ └── is-number@4.0.0 
+  │ │ │ │ └── is-windows@1.0.2 
+  │ │ │ ├─┬ regex-not@1.0.2 
+  │ │ │ │ └─┬ safe-regex@1.1.0 
+  │ │ │ │   └── ret@0.1.15 
+  │ │ │ ├─┬ snapdragon@0.8.2 
+  │ │ │ │ ├─┬ base@0.11.2 
+  │ │ │ │ │ ├─┬ cache-base@1.0.1 
+  │ │ │ │ │ │ ├─┬ collection-visit@1.0.0 
+  │ │ │ │ │ │ │ ├── map-visit@1.0.0 
+  │ │ │ │ │ │ │ └── object-visit@1.0.1 
+  │ │ │ │ │ │ ├── get-value@2.0.6 
+  │ │ │ │ │ │ ├─┬ has-value@1.0.0 
+  │ │ │ │ │ │ │ └─┬ has-values@1.0.0 
+  │ │ │ │ │ │ │   └── kind-of@4.0.0 
+  │ │ │ │ │ │ ├─┬ set-value@2.0.0 
+  │ │ │ │ │ │ │ └── extend-shallow@2.0.1 
+  │ │ │ │ │ │ ├─┬ to-object-path@0.3.0 
+  │ │ │ │ │ │ │ └── kind-of@3.2.2 
+  │ │ │ │ │ │ ├─┬ union-value@1.0.0 
+  │ │ │ │ │ │ │ └─┬ set-value@0.4.3 
+  │ │ │ │ │ │ │   └── extend-shallow@2.0.1 
+  │ │ │ │ │ │ └─┬ unset-value@1.0.0 
+  │ │ │ │ │ │   └─┬ has-value@0.3.1 
+  │ │ │ │ │ │     ├── has-values@0.1.4 
+  │ │ │ │ │ │     └─┬ isobject@2.1.0 
+  │ │ │ │ │ │       └── isarray@1.0.0 
+  │ │ │ │ │ ├─┬ class-utils@0.3.6 
+  │ │ │ │ │ │ ├── arr-union@3.1.0 
+  │ │ │ │ │ │ ├── define-property@0.2.5 
+  │ │ │ │ │ │ └─┬ static-extend@0.1.2 
+  │ │ │ │ │ │   ├── define-property@0.2.5 
+  │ │ │ │ │ │   └─┬ object-copy@0.1.0 
+  │ │ │ │ │ │     ├── copy-descriptor@0.1.1 
+  │ │ │ │ │ │     ├── define-property@0.2.5 
+  │ │ │ │ │ │     └── kind-of@3.2.2 
+  │ │ │ │ │ ├── component-emitter@1.2.1 
+  │ │ │ │ │ ├─┬ define-property@1.0.0 
+  │ │ │ │ │ │ └─┬ is-descriptor@1.0.2 
+  │ │ │ │ │ │   ├── is-accessor-descriptor@1.0.0 
+  │ │ │ │ │ │   └── is-data-descriptor@1.0.0 
+  │ │ │ │ │ ├─┬ mixin-deep@1.3.1 
+  │ │ │ │ │ │ └── is-extendable@1.0.1 
+  │ │ │ │ │ └── pascalcase@0.1.1 
+  │ │ │ │ ├─┬ debug@2.6.9 
+  │ │ │ │ │ └── ms@2.0.0 
+  │ │ │ │ ├─┬ define-property@0.2.5 
+  │ │ │ │ │ └─┬ is-descriptor@0.1.6 
+  │ │ │ │ │   ├─┬ is-accessor-descriptor@0.1.6 
+  │ │ │ │ │   │ └── kind-of@3.2.2 
+  │ │ │ │ │   ├─┬ is-data-descriptor@0.1.4 
+  │ │ │ │ │   │ └── kind-of@3.2.2 
+  │ │ │ │ │   └── kind-of@5.1.0 
+  │ │ │ │ ├── extend-shallow@2.0.1 
+  │ │ │ │ ├── source-map@0.5.7 
+  │ │ │ │ ├─┬ source-map-resolve@0.5.1 
+  │ │ │ │ │ ├── atob@2.1.1 
+  │ │ │ │ │ ├── decode-uri-component@0.2.0 
+  │ │ │ │ │ ├── resolve-url@0.2.1 
+  │ │ │ │ │ ├── source-map-url@0.4.0 
+  │ │ │ │ │ └── urix@0.1.0 
+  │ │ │ │ └── use@3.1.0 
+  │ │ │ └── to-regex@3.0.2 
+  │ │ └─┬ resolve-dir@1.0.1 
+  │ │   └─┬ global-modules@1.0.0 
+  │ │     └─┬ global-prefix@1.0.2 
+  │ │       ├── ini@1.3.5 
+  │ │       └─┬ which@1.3.0 
+  │ │         └── isexe@2.0.0 
+  │ ├─┬ fined@1.1.0 
+  │ │ ├─┬ expand-tilde@2.0.2 
+  │ │ │ └─┬ homedir-polyfill@1.0.1 
+  │ │ │   └── parse-passwd@1.0.0 
+  │ │ ├─┬ object.defaults@1.1.0 
+  │ │ │ ├── array-each@1.0.1 
+  │ │ │ └── array-slice@1.1.0 
+  │ │ ├── object.pick@1.3.0 
+  │ │ └─┬ parse-filepath@1.0.2 
+  │ │   ├─┬ is-absolute@1.0.0 
+  │ │   │ └─┬ is-relative@1.0.0 
+  │ │   │   └─┬ is-unc-path@1.0.0 
+  │ │   │     └── unc-path-regex@0.1.2 
+  │ │   ├── map-cache@0.2.2 
+  │ │   └─┬ path-root@0.1.1 
+  │ │     └── path-root-regex@0.1.2 
+  │ ├── flagged-respawn@1.0.0 
+  │ ├─┬ is-plain-object@2.0.4 
+  │ │ └── isobject@3.0.1 
+  │ ├─┬ object.map@1.0.1 
+  │ │ ├─┬ for-own@1.0.0 
+  │ │ │ └── for-in@1.0.2 
+  │ │ └── make-iterator@1.0.1 
+  │ ├── rechoir@0.6.2 
+  │ └─┬ resolve@1.7.1 
+  │   └── path-parse@1.0.5 
+  ├── minimist@1.2.0 
+  ├─┬ orchestrator@0.3.8 
+  │ ├─┬ end-of-stream@0.1.5 
+  │ │ └─┬ once@1.3.3 
+  │ │   └── wrappy@1.0.2 
+  │ ├── sequencify@0.0.7 
+  │ └── stream-consume@0.1.1 
+  ├── pretty-hrtime@1.0.3 
+  ├── semver@4.3.6 
+  ├─┬ tildify@1.2.0 
+  │ └── os-homedir@1.0.2 
+  ├─┬ v8flags@2.1.1 
+  │ └── user-home@1.1.1 
+  └─┬ vinyl-fs@0.3.14 
+    ├── defaults@1.0.3 
+    ├─┬ glob-stream@3.1.18 
+    │ ├─┬ glob@4.5.3 
+    │ │ └── inflight@1.0.6 
+    │ ├─┬ glob2base@0.0.12 
+    │ │ └── find-index@0.1.1 
+    │ ├─┬ minimatch@2.0.10 
+    │ │ └─┬ brace-expansion@1.1.11 
+    │ │   ├── balanced-match@1.0.0 
+    │ │   └── concat-map@0.0.1 
+    │ ├── ordered-read-streams@0.1.0 
+    │ ├─┬ through2@0.6.5 
+    │ │ └── readable-stream@1.0.34 
+    │ └── unique-stream@1.0.0 
+    ├─┬ glob-watcher@0.0.6 
+    │ └─┬ gaze@0.5.2 
+    │   └─┬ globule@0.1.0 
+    │     ├─┬ glob@3.1.21 
+    │     │ ├── graceful-fs@1.2.3 
+    │     │ └── inherits@1.0.2 
+    │     ├── lodash@1.0.2 
+    │     └─┬ minimatch@0.2.14 
+    │       ├── lru-cache@2.7.3 
+    │       └── sigmund@1.0.1 
+    ├─┬ graceful-fs@3.0.11 
+    │ └── natives@1.1.3 
+    ├─┬ mkdirp@0.5.1 
+    │ └── minimist@0.0.8 
+    ├─┬ strip-bom@1.0.0 
+    │ ├── first-chunk-stream@1.0.0 
+    │ └── is-utf8@0.2.1 
+    ├─┬ through2@0.6.5 
+    │ └─┬ readable-stream@1.0.34 
+    │   ├── isarray@0.0.1 
+    │   └── string_decoder@0.10.31 
+    └─┬ vinyl@0.4.6 
+      └── clone@0.2.0 
+
