@@ -1,2 +1,4 @@
 .vagrant
 Vagrantfile_pr
+.DS_Store
+.idea
