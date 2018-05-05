@@ -1,240 +1,99 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-# Install Vagrant plugins
-unless Vagrant.has_plugin?('vagrant-reload')
-  system('vagrant plugin install vagrant-reload') || exit!
-  exit system('vagrant', *ARGV)
-end
-
+# All Vagrant configuration is done below. The "2" in Vagrant.configure
+# configures the configuration version (we support older styles for
+# backwards compatibility). Please don't change it unless you know what
+# you're doing.
 Vagrant.configure("2") do |config|
+  # The most common configuration options are documented and commented below.
+  # For a complete reference, please see the online documentation at
+  # https://docs.vagrantup.com.
 
-  # Base VM box
-  config.vm.box = "TimWSpence/elementaryos"
+  # Every Vagrant development environment requires a box. You can search for
+  # boxes at https://vagrantcloud.com/search.
+  config.vm.box = "ubuntu/xenial64"
 
-  # Host configuration
-  config.vm.hostname = "devbox"
+  # Disable automatic box update checking. If you disable this, then
+  # boxes will only be checked for updates when the user runs
+  # `vagrant box outdated`. This is not recommended.
+  # config.vm.box_check_update = false
 
-  # Public network
-  config.vm.network "public_network", bridge: "en0: Wi-Fi (AirPort)", ip: "192.168.33.1"
+  # Create a forwarded port mapping which allows access to a specific port
+  # within the machine from a port on the host machine. In the example below,
+  # accessing "localhost:8080" will access port 80 on the guest machine.
+  # NOTE: This will enable public access to the opened port
+  # config.vm.network "forwarded_port", guest: 80, host: 8080
 
-  # Disable default share
-  config.vm.synced_folder '.', '/vagrant', disabled: true
+  # Create a forwarded port mapping which allows access to a specific port
+  # within the machine from a port on the host machine and only allow access
+  # via 127.0.0.1 to disable public access
+  config.vm.network "forwarded_port", guest: 80, host: 8000, host_ip: "127.0.0.1"
 
-  # Provision
-  config.vm.provision "shell", privileged: true, inline: <<-SHELL
+  # Create a private network, which allows host-only access to the machine
+  # using a specific IP.
+  # config.vm.network "private_network", ip: "192.168.33.10"
 
-    # +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-    # app-fast
-    # +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-    sudo apt-get update -y  && sudo apt-get dist-upgrade -y
-    sudo apt-get install -y software-properties-common
-    sudo add-apt-repository -y ppa:saiarcot895/myppa
-    sudo apt-get install -y apt-fast
+  # Create a public network, which generally matched to bridged network.
+  # Bridged networks make the machine appear as another physical device on
+  # your network.
+  config.vm.network "public_network", bridge: "en0: Wi-Fi (AirPort)"
 
-    # +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-    # base os cleanup
-    # +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-    sudo apt-get purge -y epiphany-browser epiphany-browser-data #browser
-    sudo apt-get purge -y midori-granite #browser
-    sudo apt-get purge -y noise
-    sudo apt-get purge -y scratch-text-editor #text-editor
-    sudo apt-get purge -y modemmanager
-    sudo apt-get purge -y geary #email
-    sudo apt-get purge -y pantheon-mail #email
-    sudo apt-get purge -y pantheon-terminal #terminal
-    sudo apt-get purge -y audience
-    sudo apt-get purge -y maya-calendar #calendar
+  # Share an additional folder to the guest VM. The first argument is
+  # the path on the host to the actual folder. The second argument is
+  # the path on the guest to mount the folder. And the optional third
+  # argument is a set of non-required options.
+  config.vm.synced_folder ".", "/vagrant"
 
-    sudo apt-get autoremove -y
-    sudo apt-get autoclean -y
-
-
-    # +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-    # install os software repository items
-    # +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-    apt-fast install -y virtualbox-guest-dkms virtualbox-guest-x11
-    sudo apt-fast install -y apt-transport-https ca-certificates curl
-    sudo apt-fast install -y gdebi
-    sudo apt-fast install -y rar unrar zip unzip p7zip-full p7zip-rar
-    sudo apt-fast install -y terminator
-    sudo apt-fast install -y krita
-    sudo apt-fast install -y htop
-    sudo apt-fast install -y gparted
-    sudo apt-fast install -y flashplugin-installer vlc browser-plugin-vlc
-    sudo apt-fast install -y firefox
-    sudo apt-fast install -y inkscape
-    sudo apt-fast install -y kazam
-    sudo apt-fast install -y git
-    sudo apt install openssh-server
-
-
-    # +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-    # add external software repositories
-    # +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-
-    # Elementry tweaks
-    sudo add-apt-repository ppa:philip.scott/elementary-tweaks
-    # Docker
-    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-    add-apt-repository \
-     "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
-     xenial \
-     stable"
-    sudo add-apt-repository ppa:linrunner/tlp
-    # Atom
-    curl -L https://packagecloud.io/AtomEditor/atom/gpgkey | sudo apt-key add -
-    sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main" > /etc/apt/sources.list.d/atom.list'
-
-    sudo apt-fast update -y
-
-
-    # +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-    # install external software repository items
-    # +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-
-    # Reduce overheating and improve battery life
-    sudo apt-fast install -y tlp tlp-rdw
-    sudo tlp start
-
-    # WPS (Office Alternative)
-    wget http://kdl1.cache.wps.com/ksodl/download/linux/a21//wps-office_10.1.0.5707~a21_amd64.deb
-    gdebi -i wps-office_10.1.0.5672~a21_amd64.deb
-    # WPS Fonts
-    wget http://kdl.cc.ksosoft.com/wps-community/download/fonts/wps-office-fonts_1.0_all.deb
-    gdebi -i wps-office-fonts_1.0_all.deb
-
-    # Chrome
-    wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-    gdebi -i google-chrome-stable_current_amd64.deb
-    gconftool-2 --set /apps/metacity/general/button_layout --type string ":minimize:maximize:close"
-
-    # jenv
-    curl -L -s get.jenv.io | bash
-    source ~/.jenv/bin/jenv-init.sh
-    jenv selfupdate
-
-    # Elementry tweaks
-    sudo apt-fast install -y elementary-tweaks elementary-wallpapers-extra
-
-    # Docker, Docker-compose
-    apt-fast install -y docker-ce
-    curl -L "https://github.com/docker/compose/releases/download/1.21.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-    chmod +x /usr/local/bin/docker-compose
-
-    # Docker commands auto completion
-    sudo curl -L https://raw.githubusercontent.com/docker/compose/1.21.0/contrib/completion/bash/docker-compose -o /etc/bash_completion.d/docker-compose
-
-    # Docker Cleanup script
-    cd /tmp
-    git clone https://gist.github.com/76b450a0c986e576e98b.git
-    cd 76b450a0c986e576e98b
-    mv docker-cleanup /usr/local/bin/docker-cleanup
-    chmod +x /usr/local/bin/docker-cleanup
-
-    # Add vagrant user to docker group
-    usermod -a -G docker vagrant
-
-    # Atom
-    sudo apt-fast install atom
-    apm install platformio-ide-terminal
-
-    # Teamviewer 11
-    wget https://download.teamviewer.com/download/teamviewer_i386.deb
-    gdebi -i teamviewer_i386.deb
-
-    # +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-    # development environments installation
-    # +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-    sudo apt-fast install build-essential
-
-    # python build tools
-    sudo apt-fast install -y python-dev python-pip python-virtualenv python-numpy python-matplotlib
-    # pyhthon for machine learning
-    pip install scipy scikit-learn matplotlib jupyter pandas numpy tensorflow keras seaborn
-    # pyhthon for web development
-    pip install django beautifulsoup4 requests ipython
-
-    # networking tools
-    sudo apt-fast install -y libpcap-dev libnet1-dev rpcbind openssh-server nmap
-
-    # node
-    echo 'export PATH=$HOME/local/bin:$PATH' >> ~/.bashrc
-    . ~/.bashrc
-    mkdir ~/local
-    mkdir ~/node-latest-install
-    cd ~/node-latest-install
-    curl http://nodejs.org/dist/node-latest.tar.gz | tar xz --strip-components=1
-    ./configure --prefix=~/local
-    make install # ok, fine, this step probably takes more than 30 seconds...
-    curl https://www.npmjs.org/install.sh | sh
-    npm install -g bower
-    npm install -g grunt-cli
-
-    # lamp
-    sudo apt-fast install -y tasksel
-    sudo tasksel install -y lamp-server
-    sudo apt-fast install -y phpmyadmin
-
-    # vhost
-    curl https://gist.github.com/fideloper/2710970/raw/5d7efd74628a1e3261707056604c99d7747fe37d/vhost.sh > vhost
-    sudo chmod guo+x vhost
-    sudo mv vhost /usr/local/bin
-
-    # composer
-    curl -sS https://getcomposer.org/installer | php
-    sudo mv composer.phar /usr/local/bin/composer
-
-    # samba
-
-    # +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-    # development environments configuration
-    # +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-
-    # git
-    touch ~/.gitignore_global
-    git config --global core.excludesfile ~/.gitignore_global
-    git config --global user.name "Kumar Gaurav"
-    git config --global user.email "grv.rkg@gmail.com"
-
-    ssh-keygen -t rsa -C "grv.rkg@gmail.com"
-    cat ~/.ssh/id_rsa.pub
-    # php
-    # apache
-    sudo apache2ctl restart
-    # mysql
-    # samba
-
-
-    # +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-    # fix broken dependencies
-    # +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-    sudo apt-fast install -y -f
-  SHELL
-
-  # VirtualBox specific config.
+  # Provider-specific configuration so you can fine-tune various
+  # backing providers for Vagrant. These expose provider-specific options.
+  # Example for VirtualBox:
   config.vm.provider "virtualbox" do |vb|
-    # VirtualBox name
-    vb.name = "DevBox"
-
     # Display the VirtualBox GUI when booting the machine
     vb.gui = true
 
     # Customize the amount of memory on the VM:
     vb.memory = "4096"
-
-    # CPUs
-    vb.cpus = 2
-
-    # Customizations
-    vb.customize ["modifyvm", :id, "--cpuexecutioncap", "100"]
-    vb.customize ["modifyvm", :id, '--clipboard', 'bidirectional']
-    vb.customize [ "modifyvm", :id, "--uartmode1", "disconnected" ]
   end
 
-  # Reload the VM
-  config.vm.provision :reload
+  # View the documentation for the provider you are using for more
+  # information on available options.
 
-  # Build success message
-  config.vm.post_up_message = "################ DEVBOX BUILD COMLPETE ################"
+  # Enable provisioning with a shell script. Additional provisioners such as
+  # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
+  # documentation for more information about their specific syntax and use.
+  config.vm.provision "shell", path: "provision.sh"
+
+  # config.ssh.username = 'vagrant'
+  # config.ssh.password = 'vagrant'
+#   config.vm.provision "ansible" do |ansible|
+#     ansible.playbook = "ubuntu-web-dev/main.yml"
+#     ansible.ask_become_pass = true
+#     # ansible-playbook setup.yml -i HOSTS --ask-sudo-pass
+#   end
+
+    # VirtualBox specific config.
+    config.vm.provider "virtualbox" do |vb|
+        # VirtualBox name
+        vb.name = "ubuntu-dev"
+
+        # Customize the amount of memory on the VM:
+        vb.memory = "4096"
+
+        # CPUs
+        vb.cpus = 2
+
+        # Customizations
+        vb.customize ["modifyvm", :id, "--cpuexecutioncap", "100"]
+        vb.customize ["modifyvm", :id, '--clipboard', 'bidirectional']
+        vb.customize [ "modifyvm", :id, "--uartmode1", "disconnected" ]
+    end
+
+    # Build success message
+    config.vm.post_up_message = "    ########################################################################################################
+    ###                                                                                                  ###
+    ### Complete                                                                                         ###
+    ### ------------------------------------------------------------------------------------------------ ###
+    ########################################################################################################
+    "
 end
