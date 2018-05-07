@@ -35,7 +35,7 @@ Vagrant.configure("2") do |config|
   config.vm.synced_folder '.', '/vagrant', disabled: true
 
   # Future-proof our main HD :)
-#   config.disksize.size = '100GB'
+#   config.disksize.size = '30GB'
 
   # VirtualBox specific config.
   config.vm.provider "virtualbox" do |vb|
