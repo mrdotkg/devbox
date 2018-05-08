@@ -15,7 +15,7 @@ dev() {
 }
 ```
 
-this will add dev alias to ssh into devbox
+this will add `dev` command alias to ssh into devbox
 
 ## localhost
 http://192.168.33.10/
