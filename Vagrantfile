@@ -20,7 +20,7 @@ end
 Vagrant.configure("2") do |config|
   config.env.enable
   config.vm.box = "ubuntu/xenial64"
-  config.vm.box_version = "20170822.0.0"
+#   config.vm.box_version = "20170822.0.0"
   
   # Host configuration
   config.vm.hostname = "ubuntu.dev"
@@ -40,7 +40,7 @@ Vagrant.configure("2") do |config|
   # VirtualBox specific config.
   config.vm.provider "virtualbox" do |vb|
     # VirtualBox name
-    vb.name = "eCommerce SSH DevBox"
+    vb.name = "Ubuntu Dev"
 
     # Customize the amount of memory on the VM:
     vb.memory = "4096"
@@ -142,7 +142,7 @@ Vagrant.configure("2") do |config|
   ### $ sudo dd if=/dev/zero of=/EMPTY bs=1M                                                           ###
   ### $ sudo rm -f /EMPTY                                                                              ###
   ### $ cat /dev/null > ~/.bash_history && history -c && exit                                          ###
-  ### VAGRANT_HOST> vagrant package --output developer-ecommerce-base-devbox.box                       ###
+  ### VAGRANT_HOST> vagrant package --output developer-base-devbox.box                       ###
   ########################################################################################################
   "
 end

@@ -6,8 +6,18 @@
 vagrant up
 ```
 
+add alias for easy ssh as described here 
+https://stackoverflow.com/a/8967864/2189773
+```SHELL
+dev() {
+    cd /path/to/devbox
+    vagrant ssh
+}
+```
 
-## links
+this will add dev alias to ssh into devbox
 
-* localhost: http://127.0.0.1:8000
-* phpmyadmin http://127.0.0.1:8000/phpmyadmin
+## localhost
+http://192.168.33.10/
+## phpmyadmin
+http://192.168.33.10/phpmyadmin
