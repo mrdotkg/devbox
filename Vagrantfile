@@ -128,7 +128,10 @@ Vagrant.configure("2") do |config|
     echo -e "https://$ESCAPED_GITHUB_USER:$ESCAPED_GITHUB_PASS@GITHUB.org" >> /home/vagrant/.git-credentials
   SHELL
 
-  # Reload the VM
+   config.vm.provision "shell", path: "terraform.sh"
+   config.vm.provision "shell", path: "aws-cli.sh"
+
+ # Reload the VM
   config.vm.provision :reload
 
   # Build success message

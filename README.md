@@ -19,5 +19,6 @@ this will add `dev` command alias to ssh into devbox
 
 ## localhost
 http://192.168.33.10/
+
 ## phpmyadmin
 http://192.168.33.10/phpmyadmin
