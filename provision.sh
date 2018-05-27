@@ -55,7 +55,7 @@ chmod +x /usr/local/bin/docker-cleanup
 
 echo -e "\n--- Add vagrant user to docker group ---\n"
 sudo groupadd docker
-usermod -a -G docker $(whoami)
+sudo usermod -a -G docker $(whoami)
 sudo service docker restart
 
 echo -e "\n--- Install Samba ---\n"
