@@ -20,8 +20,8 @@ end
 Vagrant.configure("2") do |config|
   config.env.enable
   config.vm.box = "ubuntu/xenial64"
-#   config.vm.box_version = "20170822.0.0"
-  
+  # config.vm.box_version = "20170822.0.0"
+
   # Host configuration
   config.vm.hostname = "ubuntu.dev"
 
@@ -35,7 +35,7 @@ Vagrant.configure("2") do |config|
   config.vm.synced_folder '.', '/vagrant', disabled: true
 
   # Future-proof our main HD :)
-#   config.disksize.size = '30GB'
+  # config.disksize.size = '30GB'
 
   # VirtualBox specific config.
   config.vm.provider "virtualbox" do |vb|
@@ -100,7 +100,7 @@ Vagrant.configure("2") do |config|
     HOME_DIR="/home/vagrant"
     PROJECTS_DIR=$HOME_DIR"/Projects"
 
-	# Copy user specific configuration to local variables
+    # Copy user specific configuration to local variables
     DEV_FULL_NAME="#{ENV['DEV_FULL_NAME']}"
     DEV_EMAIL="#{ENV['DEV_EMAIL']}"
     GITHUB_USER="#{ENV['GITHUB_USER']}"
@@ -128,15 +128,15 @@ Vagrant.configure("2") do |config|
     echo -e "https://$ESCAPED_GITHUB_USER:$ESCAPED_GITHUB_PASS@GITHUB.org" >> /home/vagrant/.git-credentials
   SHELL
 
-   config.vm.provision "shell", path: "terraform.sh"
-   config.vm.provision "shell", path: "aws-cli.sh"
+  config.vm.provision "shell", path: "terraform.sh"
+  config.vm.provision "shell", path: "aws-cli.sh"
 
- # Reload the VM
+  # Reload the VM
   config.vm.provision :reload
 
   # Build success message
   config.vm.post_up_message = "  ########################################################################################################
-  ### devbox Build Completed ...                                                                       ###
+  ### Devbox Build Completed ...                                                                       ###
   ###                                                                                                  ###
   ### TO PACKAGE THIS AS A BOX                                                                         ###
   ### ------------------------------------------------------------------------------------------------ ###

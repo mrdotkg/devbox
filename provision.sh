@@ -30,13 +30,17 @@ apt-get install -y virtualbox-guest-dkms virtualbox-guest-x11
 sudo apt-get install -y swapspace
 
 echo -e "\n--- Install docker ---\n"
-curl -fsSL https://download.docker.com/linux/vagrant/gpg | sudo apt-key add -
-add-apt-repository \
-   "deb [arch=amd64] https://download.docker.com/linux/vagrant \
-   $(lsb_release -cs) \
-   stable"
-apt-get update
-apt-get install -y docker-ce
+#curl -fsSL https://download.docker.com/linux/vagrant/gpg | sudo apt-key add -
+#add-apt-repository \
+#   "deb [arch=amd64] https://download.docker.com/linux/vagrant \
+#   $(lsb_release -cs) \
+#   stable"
+#apt-get update
+#apt-get install -y docker-ce
+
+# Alternatively you can use the official docker install script
+curl -fsSL https://get.docker.com/ | sh
+docker --version
 
 echo -e "\n--- Install docker compose---\n"
 curl -L "https://github.com/docker/compose/releases/download/1.11.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
@@ -50,7 +54,9 @@ mv docker-cleanup /usr/local/bin/docker-cleanup
 chmod +x /usr/local/bin/docker-cleanup
 
 echo -e "\n--- Add vagrant user to docker group ---\n"
-usermod -a -G docker vagrant
+sudo groupadd docker
+usermod -a -G docker $(whoami)
+sudo service docker restart
 
 echo -e "\n--- Install Samba ---\n"
 apt-get install -y samba samba-common python-glade2 system-config-samba
@@ -94,6 +100,8 @@ curl --silent https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
 
 echo -e "\n--- Installing NodeJS and NPM ---\n"
+sudo add-apt-repository ppa:chris-lea/node.js
+sudo apt-get -y update
 apt-get -y install nodejs npm
 
 echo -e "\n--- Installing javascript components ---\n"
