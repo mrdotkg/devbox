@@ -30,16 +30,17 @@ apt-get install -y virtualbox-guest-dkms virtualbox-guest-x11
 sudo apt-get install -y swapspace
 
 echo -e "\n--- Install docker ---\n"
-#curl -fsSL https://download.docker.com/linux/vagrant/gpg | sudo apt-key add -
-#add-apt-repository \
-#   "deb [arch=amd64] https://download.docker.com/linux/vagrant \
-#   $(lsb_release -cs) \
-#   stable"
-#apt-get update
-#apt-get install -y docker-ce
+curl -fsSL https://download.docker.com/linux/vagrant/gpg | sudo apt-key add -
+sudo apt-key fingerprint 0EBFCD88
+sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/vagrant \
+   $(lsb_release -cs) \
+   stable"
+apt-get update
+sudo apt-get install -y docker-ce
 
 # Alternatively you can use the official docker install script
-curl -fsSL https://get.docker.com/ | sh
+#curl -fsSL https://get.docker.com/ | sh
 docker --version
 
 echo -e "\n--- Install docker compose---\n"
