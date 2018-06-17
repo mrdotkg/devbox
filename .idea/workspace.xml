@@ -2,8 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b00db59e-a4ee-472a-a6fb-3a6c2fb8b3f1" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/provision/amp.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provision/base.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provision/docker.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provision/node.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provision/projects.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provision.sh" beforeDir="false" afterPath="$PROJECT_DIR$/provision.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vagrantfile" beforeDir="false" afterPath="$PROJECT_DIR$/Vagrantfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aws-cli.sh" beforeDir="false" afterPath="$PROJECT_DIR$/provision/aws-cli.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/provision.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/terraform.sh" beforeDir="false" afterPath="$PROJECT_DIR$/provision/terraform.sh" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,21 +22,42 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file leaf-file-name="Vagrantfile" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Vagrantfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="65" column="38" selection-start-line="65" selection-start-column="38" selection-end-line="65" selection-end-column="38" />
+            <state relative-caret-position="52">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="provision.sh" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/provision.sh">
+      <file leaf-file-name="terraform.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/provision/terraform.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="43" column="16" lean-forward="true" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="16" />
+            <state relative-caret-position="284">
+              <caret line="74" column="48" lean-forward="true" selection-start-line="74" selection-start-column="48" selection-end-line="74" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="267">
+                <caret line="25" selection-start-line="25" selection-end-line="25" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/provision/base.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
             </state>
           </provider>
         </entry>
@@ -36,36 +66,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>2222`</find>
-      <find>BITBUCKET_</find>
-      <find>GIYHUB</find>
-      <find>host</find>
-      <find>/vagrant</find>
-      <find>/vagrant/devbox</find>
-      <find>ln</find>
-      <find>sync</find>
-      <find>group</find>
-      <find>pipingrock</find>
-      <find>bitbu</find>
-      <find>BITBUCKET</find>
-      <find>bit</find>
-      <find>eCommerce</find>
-      <find>disk</find>
-      <find>xenial</find>
-      <find>ubuntu</find>
-      <find>ubun</find>
-      <find>ecommer</find>
-      <find>dev</find>
-      <find>ecomm</find>
-      <find>pipi</find>
-      <find>provision.sh</find>
-      <find>-S -O</find>
-      <find>Ubuntu De</find>
-      <find>git</find>
       <find>groupadd</find>
       <find>docker</find>
       <find>wget</find>
       <find>npm</find>
+      <find>node</find>
+      <find>vagra</find>
+      <find>-qq</find>
+      <find>-qq</find>
+      <find>ln</find>
+      <find>provision.s</find>
+      <find>sync</find>
+      <find>linux/vagrant/</find>
+      <find>linux/vagrant</find>
+      <find>phpmyadmin</find>
+      <find>qq</find>
+      <find>2200</find>
+      <find>apache_lock</find>
+      <find>forwa</find>
+      <find>build-esse</find>
+      <find>apt-get</find>
+      <find>debconf-set-selections</find>
+      <find>sudoInstall</find>
+      <find>sudo</find>
+      <find>CMDPREFIX</find>
+      <find>TMPDIR</find>
+      <find>ubun</find>
+      <find>echo $</find>
+      <find>&gt;&gt; vm_build.log</find>
+      <find>vm_build.log</find>
+      <find>sud</find>
     </findStrings>
     <replaceStrings>
       <replace>/devbox</replace>
@@ -74,6 +104,9 @@
       <replace>/home/vagrant/workspace</replace>
       <replace>developer</replace>
       <replace>GITHUB</replace>
+      <replace>linux/ubuntu</replace>
+      <replace>/home/vagrant/vm_build.log</replace>
+      <replace>sudo debconf-set-selections</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -83,15 +116,28 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/public/index.php" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/workspace/vm_build.log" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/example.env" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/terraform-install.sh" />
         <option value="$PROJECT_DIR$/aws-cli-install.sh" />
-        <option value="$PROJECT_DIR$/Vagrantfile" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/node.sh" />
+        <option value="$PROJECT_DIR$/docker.sh" />
         <option value="$PROJECT_DIR$/provision.sh" />
+        <option value="$PROJECT_DIR$/amp.sh" />
+        <option value="$PROJECT_DIR$/provision/provision.sh" />
+        <option value="$PROJECT_DIR$/provision/projects.sh" />
+        <option value="$PROJECT_DIR$/provision/samba.sh" />
+        <option value="$PROJECT_DIR$/provision/a.txt" />
+        <option value="$PROJECT_DIR$/provision/node.sh" />
+        <option value="$PROJECT_DIR$/Vagrantfile" />
+        <option value="$PROJECT_DIR$/provision/docker.sh" />
+        <option value="$PROJECT_DIR$/provision/amp.sh" />
+        <option value="$PROJECT_DIR$/provision/aws-cli.sh" />
+        <option value="$PROJECT_DIR$/provision/terraform.sh" />
+        <option value="$PROJECT_DIR$/provision/base.sh" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -116,23 +162,28 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="devbox" type="b2602c69:ProjectViewProjectNode" />
-              <item name="devbox" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope">
         <subPane subId="Project Files">
           <expand>
             <path>
               <item name="Root" type="cbb8eebc:String" user="Root" />
               <item name="devbox" type="cbb8eebc:String" user="devbox" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="devbox" type="cbb8eebc:String" user="devbox" />
+              <item name="provision" type="cbb8eebc:String" user="provision" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="devbox" type="b2602c69:ProjectViewProjectNode" />
+              <item name="devbox" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -150,6 +201,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/provision" />
       <recent name="$PROJECT_DIR$/workspace" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -191,27 +243,30 @@
       <workItem from="1526787860536" duration="369000" />
       <workItem from="1526805585245" duration="2858000" />
       <workItem from="1527423048264" duration="466000" />
-      <workItem from="1527423716819" duration="2634000" />
+      <workItem from="1527423716819" duration="3714000" />
+      <workItem from="1527529310567" duration="7207000" />
+      <workItem from="1529134960088" duration="23678000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31647000" />
+    <option name="totallyTimeSpent" value="63612000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.5802139" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15859374" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.26482758" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16639742" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" weight="0.328877" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32965517" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -237,7 +292,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/provision.sh">
+    <entry file="file://$PROJECT_DIR$/provision/base.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
           <caret line="38" column="28" lean-forward="true" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
@@ -251,7 +306,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/terraform.sh">
+    <entry file="file://$PROJECT_DIR$/provision/terraform.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="885">
           <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
@@ -265,7 +320,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/provision.sh">
+    <entry file="file://$PROJECT_DIR$/provision/base.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1140">
           <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
@@ -317,7 +372,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/provision.sh">
+    <entry file="file://$PROJECT_DIR$/provision/base.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1065">
           <caret line="71" column="54" selection-start-line="71" selection-start-column="54" selection-end-line="71" selection-end-column="54" />
@@ -355,7 +410,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/provision.sh">
+    <entry file="file://$PROJECT_DIR$/provision/base.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1470">
           <caret line="98" column="47" selection-start-line="98" selection-start-column="47" selection-end-line="98" selection-end-column="47" />
@@ -369,7 +424,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/provision.sh">
+    <entry file="file://$PROJECT_DIR$/provision/base.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1815">
           <caret line="121" column="22" selection-start-line="121" selection-start-column="22" selection-end-line="121" selection-end-column="22" />
@@ -383,7 +438,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/provision.sh">
+    <entry file="file://$PROJECT_DIR$/provision/base.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1815">
           <caret line="121" column="22" selection-start-line="121" selection-start-column="22" selection-end-line="121" selection-end-column="22" />
@@ -397,7 +452,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/provision.sh">
+    <entry file="file://$PROJECT_DIR$/provision/base.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1815">
           <caret line="121" column="22" selection-start-line="121" selection-start-column="22" selection-end-line="121" selection-end-column="22" />
@@ -411,7 +466,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/provision.sh">
+    <entry file="file://$PROJECT_DIR$/provision/base.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1815">
           <caret line="121" column="22" selection-start-line="121" selection-start-column="22" selection-end-line="121" selection-end-column="22" />
@@ -432,7 +487,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/provision.sh">
+    <entry file="file://$PROJECT_DIR$/provision/base.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2175">
           <caret line="145" column="92" lean-forward="true" selection-start-line="145" selection-start-column="92" selection-end-line="145" selection-end-column="92" />
@@ -441,6 +496,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/workspace/public/index.php" />
     <entry file="file://$PROJECT_DIR$/workspace/vm_build.log" />
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="8" lean-forward="true" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/example.env">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -448,55 +517,97 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/provision/samba.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
-          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/aws-cli.sh">
+    <entry file="file://$PROJECT_DIR$/provision/a.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="13" lean-forward="true" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        <state relative-caret-position="30">
+          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/terraform.sh">
+    <entry file="file://$PROJECT_DIR$/provision/vm_build.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider">
+        <state relative-caret-position="240">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/provision/docker.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="64" column="22" lean-forward="true" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="22" />
+        <state relative-caret-position="525">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SECOND">
-          <first_editor relative-caret-position="315">
-            <caret line="21" selection-start-line="21" selection-end-line="21" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
+    <entry file="file://$PROJECT_DIR$/id_rsa.pub">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="21" lean-forward="true" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+        <state relative-caret-position="15">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/provision/aws-cli.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/provision/amp.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="44" column="30" lean-forward="true" selection-start-line="44" selection-start-column="7" selection-end-line="44" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/provision/projects.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="23" column="32" lean-forward="true" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/provision/node.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="6" selection-start-line="14" selection-end-line="14" selection-end-column="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Vagrantfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="65" column="38" selection-start-line="65" selection-start-column="38" selection-end-line="65" selection-end-column="38" />
+        <state relative-caret-position="52">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/provision.sh">
+    <entry file="file://$PROJECT_DIR$/provision/base.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="43" column="16" lean-forward="true" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="16" />
+        <state relative-caret-position="405">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/provision/terraform.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="74" column="48" lean-forward="true" selection-start-line="74" selection-start-column="48" selection-end-line="74" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="267">
+            <caret line="25" selection-start-line="25" selection-end-line="25" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

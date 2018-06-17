@@ -80,4 +80,5 @@ rm -rf "${UTILTMPDIR}"
 [[ ! "$STREAMLINED" ]] && echo
 echo "Terraform Version ${VERSION} installed to ${BINDIR}"
 
-exit 0
+sudo chown vagrant:vagrant /home/vagrant/vm_build.log
+echo $(terraform --version) >> /home/vagrant/vm_build.log 2>&1
