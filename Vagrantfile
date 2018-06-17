@@ -53,7 +53,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", privileged: true,path: "provision/projects.sh"
 
   # Comment the lines below to stop them from being provisioned
-  config.vm.provision "shell", path: "provision/amp.sh"
+  config.vm.provision "shell", path: "provision/pamp.sh"
   config.vm.provision "shell", path: "provision/node.sh"
   config.vm.provision "shell", path: "provision/docker.sh"
   config.vm.provision "shell", path: "provision/aws-cli.sh"
