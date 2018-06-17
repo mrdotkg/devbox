@@ -1,4 +1,6 @@
 .vagrant
 ./.DS_Store
-./.idea
+.idea
 .env
+provision/*
+!provision/*.sh

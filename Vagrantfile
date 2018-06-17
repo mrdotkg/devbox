@@ -26,7 +26,7 @@ Vagrant.configure("2") do |config|
   config.ssh.forward_agent = true
 
   # Disable default share
-  config.vm.synced_folder 'provision', '/home/vagrant/workspace', type: 'nfs', mount_options: ['rw','vers=3','tcp'], linux__nfs_options:['rw','no_subtree_check','all_squash','async']
+  config.vm.synced_folder '/Users/kumar/workspace', '/home/vagrant/workspace', type: 'nfs', mount_options: ['rw','vers=3','tcp'], linux__nfs_options:['rw','no_subtree_check','all_squash','async']
 
   # VirtualBox specific config.
   config.vm.provider "virtualbox" do |vb|

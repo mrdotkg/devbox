@@ -15,7 +15,7 @@ if ! curl -h 2&> /dev/null; then
   apt-get -y install curl
 fi
 
-LATEST=$(curl -s https://api.github.com/repos/hashicorp/terraform/releases/latest 2> /dev/null | awk '/tag_name/ {print $2}' | cut -d '"' -f 2 | cut -d 'v' -f 2)
+LATEST=$(curl -s https://api.github.com/repos/nodejs/node/releases/latest 2> /dev/null | awk '/tag_name/ {print $2}' | cut -d '"' -f 2 | cut -d 'v' -f 2)
 
 
 # POPULATE VARIABLES NEEDED TO CREATE DOWNLOAD URL AND FILENAME

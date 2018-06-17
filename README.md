@@ -58,3 +58,4 @@ This will add `dev` command alias to ssh into devbox
 
 * https://unix.stackexchange.com/questions/23291/how-to-ssh-to-remote-server-using-a-private-key
 * https://stackoverflow.com/a/8967864/2189773
+* https://stackoverflow.com/questions/305035/how-to-use-ssh-to-run-a-shell-script-on-a-remote-machine

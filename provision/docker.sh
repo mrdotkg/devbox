@@ -14,7 +14,8 @@ sudo apt-get install -y docker-ce
 #curl -fsSL https://get.docker.com/ | sh
 
 echo -e "\n--- Install docker compose---\n"
-curl -L "https://github.com/docker/compose/releases/download/1.11.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+DC_LATEST=`git ls-remote https://github.com/docker/compose | grep refs/tags | grep -oP "[0-9]+\.[0-9][0-9]+\.[0-9]+$" | tail -n 1`
+curl -L "https://github.com/docker/compose/releases/download/$DC_LATEST/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 
 echo -e "\n--- Install docker cleanup script ---\n"
