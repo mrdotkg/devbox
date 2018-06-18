@@ -21,6 +21,8 @@ nodejs v10.4.1
 npm 6.1.0
 bower 1.8.4
 gulp [03:13:15] CLI version 3.9.1
+Docker version 18.03.1-ce, build 9ee9f40
+docker-compose version 1.21.2, build a133471
 aws-cli/1.15.40 Python/3.5.2 Linux/4.4.0-122-generic botocore/1.10.40
 Terraform v0.11.7
 ```

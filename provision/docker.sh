@@ -32,5 +32,5 @@ sudo service docker restart
 
 
 
-echo $(docker --version) >> vm_build.log 2>&1
-echo $(docker-compose --version) >> vm_build.log 2>&1
+echo $(docker --version) >> /home/vagrant/vm_build.log 2>&1
+echo $(docker-compose --version) >> /home/vagrant/vm_build.log 2>&1
