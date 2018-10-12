@@ -46,6 +46,7 @@ vagrant ssh
 vagrant@devbox:~$ copied_public_key >> ~/.ssh/authorized_keys
 ```
 Replace **_copied_public_key_** with with your own public key.
+ssh vagrant@127.0.0.1 -p 2222
 
 ### Alias for easy ssh
 ```SHELL
